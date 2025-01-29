@@ -669,6 +669,43 @@ summary::-webkit-details-marker {
   position: relative;
 }
 
+body, html {
+  -ms-overflow-style: none; /* IE y Edge */
+  scrollbar-width: none;    /* Firefox */
+}
+
+body::-webkit-scrollbar {
+  display: none; /* Chrome, Safari y Opera */
+}
+
+
+
+.floating-scrollbar {
+  position: fixed;
+  top: 0;
+  right: 0px;
+  width: 8px;
+  height: 50px;
+  background-color: #eb4034;
+  border-radius: 4px;
+  z-index: 10;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, height 0.3s ease; /* Transición suave */
+}
+
+.floating-scrollbar:hover {
+  height: 70px;
+  background-color: #d32f2f;
+}
+
+.floating-scrollbar:active {
+  cursor: grabbing;
+}
+
+
+
+
+
 .disclosure-has-popup[open] > summary::before {
   position: fixed;
   top: 0;
