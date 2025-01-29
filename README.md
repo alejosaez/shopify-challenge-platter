@@ -56,4 +56,9 @@ For a more dynamic approach, products can be fetched in two ways:
 - Using product_list in the schema: Allows merchants to manually select products via the Theme Editor.
 - Using Shopify Metafields: Enables automatic selection of products (e.g., best sellers, featured products).
 
+## Demo Video
+
+For a demonstration of the implementation, watch the video below:
+[![Shopify Challenge Video](https://img.youtube.com/vi/VVqW6T5Z-Wo/0.jpg)](https://youtu.be/VVqW6T5Z-Wo)
+
 
