@@ -1,0 +1,119 @@
+<div class="container mx-auto px-6 lg:px-4 py-8">
+  <h1 class="text-3xl font-bold mb-6 text-center">{{ section.settings.title }}</h1>
+
+  <div id="product-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+    {% for product in section.settings.products %}
+      {% render 'product-card', product: product %}
+    {% endfor %}
+  </div>
+
+  <div class="text-center mt-4 md:hidden">
+    <button id="show-more-btn" class="bg-gray-800 text-white px-6 py-4 rounded hover:bg-gray-600 w-full rounded-full">Show More</button>
+  </div>
+</div>
+
+<script src="https://cdn.tailwindcss.com" defer></script>
+<script src="{{ 'product-cards.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Product Cards",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Best Sellers"
+    },
+    {
+      "type": "list",
+      "id": "products",
+      "label": "Products",
+      "default": [
+        {
+          "title": "Nike Red Shoe",
+          "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3",
+          "rating": "★★★★☆",
+          "price": "$104.95"
+        },
+        {
+          "title": "Modern Sneaker",
+          "image": "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?q=80&w=3125&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "rating": "★★★★★",
+          "price": "$149.95"
+        },
+        {
+          "title": "Classic Watch",
+          "image": "https://images.unsplash.com/photo-1519554318711-aaf73ece6ff9?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "rating": "★★★★☆",
+          "price": "$199.95"
+        },
+        {
+          "title": "Leather Bag",
+          "image": "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?q=80&w=2979&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "rating": "★★★★★",
+          "price": "$249.95"
+        },
+        {
+          "title": "Nike Red Shoe",
+          "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3",
+          "rating": "★★★★☆",
+          "price": "$104.95"
+        },
+        {
+          "title": "Modern Sneaker",
+          "image": "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?q=80&w=3125&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "rating": "★★★★★",
+          "price": "$149.95"
+        },
+        {
+          "title": "Classic Watch",
+          "image": "https://images.unsplash.com/photo-1519554318711-aaf73ece6ff9?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "rating": "★★★★☆",
+          "price": "$199.95"
+        },
+        {
+          "title": "Leather Bag",
+          "image": "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?q=80&w=2979&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "rating": "★★★★★",
+          "price": "$249.95"
+        },
+        {
+          "title": "Nike Red Shoe",
+          "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3",
+          "rating": "★★★★☆",
+          "price": "$104.95"
+        },
+        {
+          "title": "Modern Sneaker",
+          "image": "https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?q=80&w=3125&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "rating": "★★★★★",
+          "price": "$149.95"
+        }
+      ],
+      "options": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Product Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product Image"
+        },
+        {
+          "type": "text",
+          "id": "rating",
+          "label": "Product Rating"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Product Price"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

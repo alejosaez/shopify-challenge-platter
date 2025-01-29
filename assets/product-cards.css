@@ -1,0 +1,9 @@
+/* Zoom effect styles */
+.product-image {
+    transition: transform 0.3s ease;
+    will-change: transform;
+}
+
+.group:hover .product-image {
+    transform: scale(1.05);
+}
