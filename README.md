@@ -59,6 +59,8 @@ For a more dynamic approach, products can be fetched in two ways:
 ## Demo Video
 
 For a demonstration of the implementation, watch the video below:
+
+
 [![Shopify Challenge Video](https://img.youtube.com/vi/VVqW6T5Z-Wo/0.jpg)](https://youtu.be/VVqW6T5Z-Wo)
 
 
